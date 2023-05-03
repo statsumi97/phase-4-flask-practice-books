@@ -154,4 +154,4 @@ Returns a publisher with the matching id. If there is no publisher, returns a me
 }
 ```
 
-Hint: You may need to pay attention to how you return your data as the author needs to be returned without their books for this route.
+*Hint: You may need to pay attention to how you return your data as the author needs to be returned without their books for this route.*
