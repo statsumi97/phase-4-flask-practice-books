@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
-from flask import Flask, request
-from flask_sqlalchemy import SQLAlchemy
+from flask import Flask, make_response, jsonify, request
+from flask_restful import Api, Resource
 from flask_migrate import Migrate
 
 from models import db # import your models here!
@@ -14,6 +14,8 @@ app.json.compact = False
 migrate = Migrate(app, db)
 
 db.init_app(app)
+
+api = Api(app)
 
 @app.get('/')
 def index():
